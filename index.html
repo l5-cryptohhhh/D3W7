@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini-libreria — Settimana VII Giorno I</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>La mia libreria — esplora Open Library</h1>
+    <p>Cerca libri reali da Open Library e aggiungili alla tua libreria personale.</p>
+  </header>
+
+  <main class="container">
+    <!-- RICERCA -->
+    <section class="form-section">
+      <h2>Cerca</h2>
+      <div class="cerca-row">
+        <label for="cerca">Titolo o autore</label>
+        <input type="text" id="cerca" placeholder="es. harari, tolkien, sapiens…" autocomplete="off">
+      </div>
+
+      <!-- stato: spinner / errore -->
+      <div id="stato-ricerca" aria-live="polite"></div>
+
+      <!-- risultati -->
+      <ul id="risultati" class="risultati"></ul>
+    </section>
+
+    <!-- LIBRERIA PERSONALE -->
+    <section class="lista-section">
+      <div class="lista-header">
+        <h2 id="titolo-lista">I tuoi libri (0)</h2>
+        <div class="lista-azioni">
+          <button id="btn-esporta">Esporta JSON</button>
+          <button id="svuota-tutto" class="btn-svuota">Svuota tutto</button>
+        </div>
+      </div>
+      <p class="info-storage">I libri salvati restano nel browser fra le sessioni.</p>
+      <ul id="lista-libri"></ul>
+    </section>
+  </main>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
